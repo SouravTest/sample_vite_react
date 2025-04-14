@@ -1,17 +1,16 @@
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import "./App.css";
 import RouteConfig from "./routes";
+import { ToastContainer } from 'react-toastify';
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
       <Router>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
-        </nav>
+        <Navbar />
         <RouteConfig />
+        <ToastContainer />
       </Router>
     </>
   );
